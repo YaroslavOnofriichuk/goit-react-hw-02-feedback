@@ -28,12 +28,14 @@ class App extends Component {
         return value;
     };
 
+    options = Object.keys(this.state);
+
     render() {
         return (
             <>
                 <Section title="Please leave feedback">
                     <FeedbackOptions
-                        options={Object.keys(this.state)}
+                        options={this.options}
                         onLeaveFeedback={this.onLeaveFeedback}
                     />
                 </Section>
